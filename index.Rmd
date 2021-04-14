@@ -106,6 +106,8 @@ kig("img/cover_rrs.png")
 (2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science).
 ]
 
+--
+
 ### To do this science need to be **open** at least to some extent: **code** and **data** have to be available.
 
 
@@ -216,13 +218,19 @@ class: inverse, center, middle
 
 
 ---
-# One well-structured folder!
+# Follow 4 simple rules!
+
+## 1. Start off raw data 
+
+- avoid editing raw data 
+- keep scripts that generate (cleaner) intermediate files
+- if you create a lot of simulation, keep the scripts that generate the data.
+
+---
+# Follow 4 simple rules!
 
 
-## Follow 3 simple rules!
-
-
-### 1. The folder must be self contained
+## 2. The folder must be self contained
 
   - think of the root of the folder as the root of the system
   - ~~C:\user/data\dat0001.txt~~
@@ -230,25 +238,19 @@ class: inverse, center, middle
   - does not mean everything will be shared / added in the research compendium
 
 ---
-# One well-structured folder!
+# Follow 4 simple rules!
 
-
-## Follow 3 simple rules!
-
-### 2. document massively
+## 3. document massively
 
   - your datasets (could be a link to relevant documentation)
   - your functions and scripts
   - and the tricks you've used that won't be clear to others (that includes future yourself!)
+  - use metadata [EML](https://eml.ecoinformatics.org/)
 
 ---
-# One well-structured folder!
+# Follow 4 simple rules!
 
-
-## Follow 3 simple rules!
-
-
-### 3. Keep track of all versions you've used
+## 4. Keep track of all versions you've used
 
   - R version (and other software)
   - Package versions
@@ -311,7 +313,7 @@ kig("img/data_avail.png")
 
 ### After publication 
 
-> Code and data are available at the following URL (DOI)
+> Code and data are available at the following URL (DOI).
 
 
 
@@ -328,8 +330,34 @@ kig("img/repo_table.png")
 
 
 ---
+# Various options 
+
+### Document your data 
+
+* A simple text  
+* Using a standard for your metadata ([EML](https://eml.ecoinformatics.org/))
+* A data paper 
+
+--
+
+### Document your code 
+
+* Comments 
+* Use specific guidelines 
+* Create a package
+ 
+
+
+---
 # Demo/examples
 
+## GitHub + Zenodo 
+
+- https://github.com/McCannLab/NDID
+
+- https://github.com/McCannLab/HomogenFishOntario
+
+## GitHub + Zenodo + Dryad
 
 - https://www.mdpi.com/2304-8158/10/4/717
 
@@ -337,6 +365,4 @@ kig("img/repo_table.png")
 
 - https://zenodo.org/record/4602032#.YHY6RyUpCV4
 
-- https://github.com/McCannLab/NDID
 
-- https://github.com/McCannLab/HomogenFishOntario
