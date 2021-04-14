@@ -1,0 +1,342 @@
+---
+title: "Prepare your data and your code for manuscript"
+author: "inSileco Team"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+
+```{r setup, include = FALSE}
+source("_setup.R")
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #37abc8\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+xaringanExtra::use_scribble()
+```
+
+
+
+class: title-slide, middle
+
+
+## .font140[Data and code ready for your paper]
+
+<br>
+
+.instructors[
+  <br><br><br>
+  .font120[.authors140[Kevin, Matt & Chris]]
+  <br><br>
+  .font120[`r format(Sys.time(), '%B %d, %Y')`]
+  <br>
+]
+
+<br><br><br><br><br><br>
+
+.font140[[`r gh()` dataReady](https://github.com/McCannLab/dataReady/)] 
+
+![deploy workshop](https://github.com/McCannLab/dataReady/workflows/deploy%20workshop/badge.svg)
+
+.instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-zero")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Reproducible Research
+
+![:custom_hr]()
+
+## [workshop_reproducibility](https://insilecoinc.github.io/workshop_reproducibility/#1)
+
+
+---
+# Reproducible research (in a nutshell)
+
+--
+
+* Started late 80's 
+
+--
+
+* Not that easy to redo the process: **raw data** `r ar()` **results** `r ar()` **paper**
+
+--
+
+* From 80's to 2010's it get worst (due to an increased number of computational operations)
+
+--
+
+* Reproducible research became more important since 
+
+
+---
+
+# Reproducible research (in a nutshell)
+
+
+> We define **reproducibility** to mean **computational reproducibility**—­
+obtaining consistent computational results using the same **input data**, computational steps, methods, **code**, and conditions of analysis;
+
+
+.pull-left[
+```{R, echo = FALSE, out.width = "50%", purl = FALSE}
+kig("img/cover_rrs.png")
+```
+]
+
+.pull-right[
+
+`r rfa("file")` National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science).
+]
+
+### To do this science need to be **open** at least to some extent: **code** and **data** have to be available.
+
+
+
+---
+# Reproducible research (in a nutshell)
+
+Make sure that&nbsp;: 
+
+* Data are not a well-chosen subset....
+* Code can be run not just on your computer...
+* Avoid [excel-related error](https://www.nytimes.com/2013/04/19/opinion/krugman-the-excel-depression.html)
+* etc. 
+
+--
+
+### Preparing data and code for submission is an important part of this!
+
+
+
+---
+
+class: inverse, center, middle
+
+# Try to be organized
+
+![:custom_hr]()
+
+
+---
+# One well-structured folder! [Download it](https://github.com/inSilecoInc/workshop_reproducibility/raw/main/demo/min_workflow.zip).
+
+--
+
+
+
+.pull-left[
+```sh
+`r emj("file_folder")`
+.
+├── data
+├── ms
+├── output
+├── src
+└── README.md
+```
+]
+
+--
+
+.pull-right[
+```sh
+`r emj("file_folder")`
+.
+├── data
+├── ms
+├── output
+├── R
+└── README.md
+```
+]
+
+<br>
+
+--
+
+`r rfa("blog")` Rich FitzJohn (2013). [Designing projects](https://nicercode.github.io/blog/2013-04-05-projects/)
+
+
+
+---
+# One well-structured folder!
+
+
+- `r emj("file_folder")` `R` : R code (`.R` files)
+
+  - functions, scripts ...
+  - data retrieval, statistical analysis, figure
+
+<br>
+
+--
+
+- `r emj("file_folder")` `data` :
+
+  - input/raw data
+  - processed data
+  - data may be archived on line (e.g. Dryad) and may be accessed via a script (see [rdryad](https://docs.ropensci.org/rdryad/))
+
+---
+# One well-structured folder!
+
+
+- `r emj("file_folder")` `output` (`fig` / `tab` / `res`):
+
+  - figures
+  - tables
+
+<br>
+
+--
+
+- `r emj("file_folder")` `ms` (`doc`)
+
+  - main manuscript
+  - supplementary information (SI)
+
+
+
+---
+# One well-structured folder!
+
+
+## Follow 3 simple rules!
+
+
+### 1. The folder must be self contained
+
+  - think of the root of the folder as the root of the system
+  - ~~C:\user/data\dat0001.txt~~
+  - but this system is not isolated (e.g. remote)
+  - does not mean everything will be shared / added in the research compendium
+
+---
+# One well-structured folder!
+
+
+## Follow 3 simple rules!
+
+### 2. document massively
+
+  - your datasets (could be a link to relevant documentation)
+  - your functions and scripts
+  - and the tricks you've used that won't be clear to others (that includes future yourself!)
+
+---
+# One well-structured folder!
+
+
+## Follow 3 simple rules!
+
+
+### 3. Keep track of all versions you've used
+
+  - R version (and other software)
+  - Package versions
+
+<br><br>
+
+.font80[`r fl()` Sandve et al. [Ten Simple Rules for Reproducible Computational
+Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)]
+
+
+---
+# One well-structured folder!
+
+### 1. Submit your ms 
+
+### 2. Once your ms is accepted zip the folder without `ms`
+
+### 3. `r ar()` research compendium
+
+--
+
+<br>
+
+```{R, echo = FALSE, out.width = "80%", purl = FALSE}
+kig("img/spectrum.png")
+```
+
+
+
+---
+
+class: inverse, center, middle
+
+# Data & code ready for submission
+
+![:custom_hr]()
+
+
+
+---
+# What do journals want?
+
+```{R, echo = FALSE, out.width = "50%", purl = FALSE}
+kig("img/data_avail.png")
+```
+
+
+.font80[[`r fl()`](https://www.sciencedirect.com/science/article/pii/S0169534715002906) Mislan et al. (2016)]
+
+
+
+---
+# Data and code availability statements
+
+
+### Before publication 
+
+> Code and data will made (publicly) available upon acceptance.
+
+
+### After publication 
+
+> Code and data are available at the following URL (DOI)
+
+
+
+---
+# Various options 
+
+```{R, echo = FALSE, out.width = "100%", purl = FALSE}
+kig("img/repo_table.png")
+```
+
+`r fl()` Mislan, K.A.S., Heer, J.M., and White, E.P. (2016). [Elevating The Status of Code in Ecology](https://www.sciencedirect.com/science/article/pii/S0169534715002906). Trends in Ecology & Evolution 31, 4–7.
+
+`r lk()` https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards
+
+
+---
+# Demo/examples
+
+
+- https://www.mdpi.com/2304-8158/10/4/717
+
+- https://doi.org/10.5061/dryad.95x69p8jd
+
+- https://zenodo.org/record/4602032#.YHY6RyUpCV4
+
+- https://github.com/McCannLab/NDID
+
+- https://github.com/McCannLab/HomogenFishOntario

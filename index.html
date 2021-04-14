@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Prepare your data and your code for manuscript</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="inSileco Team" />
+    <script src="assets/header-attrs/header-attrs.js"></script>
+    <link href="assets/remark-css/default.css" rel="stylesheet" />
+    <link href="assets/remark-css/hygge.css" rel="stylesheet" />
+    <script src="assets/clipboard/clipboard.min.js"></script>
+    <link href="assets/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="assets/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #37abc8\"><\/i>","error":"Press Ctrl+C to Copy"})</script>
+    <link href="assets/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/v4-shims.css" rel="stylesheet" />
+    <script src="assets/fabric/fabric.min.js"></script>
+    <link href="assets/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="assets/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <link rel="stylesheet" href="rd.css" type="text/css" />
+    <link rel="stylesheet" href="rd-font.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+class: title-slide, middle
+
+
+## .font140[Data and code ready for your paper]
+
+&lt;br&gt;
+
+.instructors[
+  &lt;br&gt;&lt;br&gt;&lt;br&gt;
+  .font120[.authors140[Kevin, Matt &amp; Chris]]
+  &lt;br&gt;&lt;br&gt;
+  .font120[April 14, 2021]
+  &lt;br&gt;
+]
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.font140[[&lt;svg viewBox="0 0 496 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"&gt;&lt;/path&gt;&lt;/svg&gt; dataReady](https://github.com/McCannLab/dataReady/)] 
+
+![deploy workshop](https://github.com/McCannLab/dataReady/workflows/deploy%20workshop/badge.svg)
+
+.instructors[Content under [&lt;svg viewBox="0 0 496 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M245.83 214.87l-33.22 17.28c-9.43-19.58-25.24-19.93-27.46-19.93-22.13 0-33.22 14.61-33.22 43.84 0 23.57 9.21 43.84 33.22 43.84 14.47 0 24.65-7.09 30.57-21.26l30.55 15.5c-6.17 11.51-25.69 38.98-65.1 38.98-22.6 0-73.96-10.32-73.96-77.05 0-58.69 43-77.06 72.63-77.06 30.72-.01 52.7 11.95 65.99 35.86zm143.05 0l-32.78 17.28c-9.5-19.77-25.72-19.93-27.9-19.93-22.14 0-33.22 14.61-33.22 43.84 0 23.55 9.23 43.84 33.22 43.84 14.45 0 24.65-7.09 30.54-21.26l31 15.5c-2.1 3.75-21.39 38.98-65.09 38.98-22.69 0-73.96-9.87-73.96-77.05 0-58.67 42.97-77.06 72.63-77.06 30.71-.01 52.58 11.95 65.56 35.86zM247.56 8.05C104.74 8.05 0 123.11 0 256.05c0 138.49 113.6 248 247.56 248 129.93 0 248.44-100.87 248.44-248 0-137.87-106.62-248-248.44-248zm.87 450.81c-112.54 0-203.7-93.04-203.7-202.81 0-105.42 85.43-203.27 203.72-203.27 112.53 0 202.82 89.46 202.82 203.26-.01 121.69-99.68 202.82-202.84 202.82z"&gt;&lt;/path&gt;&lt;/svg&gt; &lt;svg viewBox="0 0 496 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M247.6 8C389.4 8 496 118.1 496 256c0 147.1-118.5 248-248.4 248C113.6 504 0 394.5 0 256 0 123.1 104.7 8 247.6 8zm.8 44.7C130.2 52.7 44.7 150.6 44.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8.1-113.8-90.2-203.3-202.8-203.3zm-.4 60.5c-81.9 0-102.5 77.3-102.5 142.8 0 65.5 20.6 142.8 102.5 142.8S350.5 321.5 350.5 256c0-65.5-20.6-142.8-102.5-142.8zm0 53.9c3.3 0 6.4.5 9.2 1.2 5.9 5.1 8.8 12.1 3.1 21.9l-54.5 100.2c-1.7-12.7-1.9-25.1-1.9-34.4 0-28.8 2-88.9 44.1-88.9zm40.8 46.2c2.9 15.4 3.3 31.4 3.3 42.7 0 28.9-2 88.9-44.1 88.9-13.5 0-32.6-7.7-20.1-26.4l60.9-105.2z"&gt;&lt;/path&gt;&lt;/svg&gt;](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Reproducible Research
+
+![:custom_hr]()
+
+## [workshop_reproducibility](https://insilecoinc.github.io/workshop_reproducibility/#1)
+
+
+---
+# Reproducible research (in a nutshell)
+
+--
+
+* Started late 80's 
+
+--
+
+* Not that easy to redo the process: **raw data** &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"&gt;&lt;/path&gt;&lt;/svg&gt; **results** &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"&gt;&lt;/path&gt;&lt;/svg&gt; **paper**
+
+--
+
+* From 80's to 2010's it get worst (due to an increased number of computational operations)
+
+--
+
+* Reproducible research became more important since 
+
+
+---
+
+# Reproducible research (in a nutshell)
+
+
+&gt; We define **reproducibility** to mean **computational reproducibility**—­
+obtaining consistent computational results using the same **input data**, computational steps, methods, **code**, and conditions of analysis;
+
+
+.pull-left[
+&lt;img src="img/cover_rrs.png" width="50%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+&lt;svg viewBox="0 0 384 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science).
+]
+
+### To do this science need to be **open** at least to some extent: **code** and **data** have to be available.
+
+
+
+---
+# Reproducible research (in a nutshell)
+
+Make sure that&amp;nbsp;: 
+
+* Data are not a well-chosen subset....
+* Code can be run not just on your computer...
+* Avoid [excel-related error](https://www.nytimes.com/2013/04/19/opinion/krugman-the-excel-depression.html)
+* etc. 
+
+--
+
+### Preparing data and code for submission is an important part of this!
+
+
+
+---
+
+class: inverse, center, middle
+
+# Try to be organized
+
+![:custom_hr]()
+
+
+---
+# One well-structured folder! [Download it](https://github.com/inSilecoInc/workshop_reproducibility/raw/main/demo/min_workflow.zip).
+
+--
+
+
+
+.pull-left[
+```sh
+📁
+.
+├── data
+├── ms
+├── output
+├── src
+└── README.md
+```
+]
+
+--
+
+.pull-right[
+```sh
+📁
+.
+├── data
+├── ms
+├── output
+├── R
+└── README.md
+```
+]
+
+&lt;br&gt;
+
+--
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"&gt;&lt;/path&gt;&lt;/svg&gt; Rich FitzJohn (2013). [Designing projects](https://nicercode.github.io/blog/2013-04-05-projects/)
+
+
+
+---
+# One well-structured folder!
+
+
+- 📁 `R` : R code (`.R` files)
+
+  - functions, scripts ...
+  - data retrieval, statistical analysis, figure
+
+&lt;br&gt;
+
+--
+
+- 📁 `data` :
+
+  - input/raw data
+  - processed data
+  - data may be archived on line (e.g. Dryad) and may be accessed via a script (see [rdryad](https://docs.ropensci.org/rdryad/))
+
+---
+# One well-structured folder!
+
+
+- 📁 `output` (`fig` / `tab` / `res`):
+
+  - figures
+  - tables
+
+&lt;br&gt;
+
+--
+
+- 📁 `ms` (`doc`)
+
+  - main manuscript
+  - supplementary information (SI)
+
+
+
+---
+# One well-structured folder!
+
+
+## Follow 3 simple rules!
+
+
+### 1. The folder must be self contained
+
+  - think of the root of the folder as the root of the system
+  - ~~C:\user/data\dat0001.txt~~
+  - but this system is not isolated (e.g. remote)
+  - does not mean everything will be shared / added in the research compendium
+
+---
+# One well-structured folder!
+
+
+## Follow 3 simple rules!
+
+### 2. document massively
+
+  - your datasets (could be a link to relevant documentation)
+  - your functions and scripts
+  - and the tricks you've used that won't be clear to others (that includes future yourself!)
+
+---
+# One well-structured folder!
+
+
+## Follow 3 simple rules!
+
+
+### 3. Keep track of all versions you've used
+
+  - R version (and other software)
+  - Package versions
+
+&lt;br&gt;&lt;br&gt;
+
+.font80[&lt;svg viewBox="0 0 384 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; Sandve et al. [Ten Simple Rules for Reproducible Computational
+Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)]
+
+
+---
+# One well-structured folder!
+
+### 1. Submit your ms 
+
+### 2. Once your ms is accepted zip the folder without `ms`
+
+### 3. &lt;svg viewBox="0 0 448 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"&gt;&lt;/path&gt;&lt;/svg&gt; research compendium
+
+--
+
+&lt;br&gt;
+
+&lt;img src="img/spectrum.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+class: inverse, center, middle
+
+# Data &amp; code ready for submission
+
+![:custom_hr]()
+
+
+
+---
+# What do journals want?
+
+&lt;img src="img/data_avail.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+.font80[[&lt;svg viewBox="0 0 384 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt;](https://www.sciencedirect.com/science/article/pii/S0169534715002906) Mislan et al. (2016)]
+
+
+
+---
+# Data and code availability statements
+
+
+### Before publication 
+
+&gt; Code and data will made (publicly) available upon acceptance.
+
+
+### After publication 
+
+&gt; Code and data are available at the following URL (DOI)
+
+
+
+---
+# Various options 
+
+&lt;img src="img/repo_table.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+&lt;svg viewBox="0 0 384 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; Mislan, K.A.S., Heer, J.M., and White, E.P. (2016). [Elevating The Status of Code in Ecology](https://www.sciencedirect.com/science/article/pii/S0169534715002906). Trends in Ecology &amp; Evolution 31, 4–7.
+
+&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:currentColor;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards
+
+
+---
+# Demo/examples
+
+
+- https://www.mdpi.com/2304-8158/10/4/717
+
+- https://doi.org/10.5061/dryad.95x69p8jd
+
+- https://zenodo.org/record/4602032#.YHY6RyUpCV4
+
+- https://github.com/McCannLab/NDID
+
+- https://github.com/McCannLab/HomogenFishOntario
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "dracula",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
